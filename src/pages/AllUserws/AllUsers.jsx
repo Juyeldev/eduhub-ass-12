@@ -14,7 +14,7 @@ const {user, loading}= useContext(AuthContext)
 const { data: users = [], refetch } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-        const res = await axios.get('http://localhost:5000/users');
+        const res = await axios.get('https://assignment-12-server-xi-fawn.vercel.app/users');
         return res.data;
     },
     enabled: !loading && !!user?.email,
@@ -25,7 +25,7 @@ const { data: users = [], refetch } = useQuery({
 
 
 //     const { data: userse= [], refetch } = useQuery(['users'], async () => {
-//         const res = await fetch(`http://localhost:5000/users`)
+//         const res = await fetch(`https://assignment-12-server-xi-fawn.vercel.app/users`)
 //         return res.json();
         
 //     })
@@ -33,7 +33,7 @@ const { data: users = [], refetch } = useQuery({
 
 
     const handleMakeAdmin = user =>{
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        fetch(`https://assignment-12-server-xi-fawn.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -54,7 +54,7 @@ const { data: users = [], refetch } = useQuery({
     }
     
     const handleMakeInstructor = user =>{
-        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+        fetch(`https://assignment-12-server-xi-fawn.vercel.app/users/instructor/${user._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -75,7 +75,7 @@ const { data: users = [], refetch } = useQuery({
     }
 
     const handleUserDelete=(_id)=>{
-        fetch(`http://localhost:5000/users/${_id}`,{
+        fetch(`https://assignment-12-server-xi-fawn.vercel.app/users/${_id}`,{
             method: 'DELETE',
         })
         .then(res=>res.json())

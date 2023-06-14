@@ -8,7 +8,7 @@ const useClass = () => {
     // const [loading, setLoading] = useState(true)
 
     // useEffect(()=>{
-    //     fetch('http://localhost:5000/classes')
+    //     fetch('https://assignment-12-server-xi-fawn.vercel.app/classes')
     //     .then(res => res.json())
     //         .then(data => {
     //             console.log(data);
@@ -20,7 +20,7 @@ const useClass = () => {
 const  {data, isLoading:loading}=useQuery({
     queryKey:['class'],
     queryFn: async()=>{
-        const res= await fetch ('http://localhost:5000/classes')
+        const res= await fetch ('https://assignment-12-server-xi-fawn.vercel.app/classes')
         return res.json();
     }
 

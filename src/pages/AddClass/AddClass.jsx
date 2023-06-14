@@ -28,7 +28,7 @@ const AddClass = () => {
                     const imgUrl = imgRes.data.display_url;
                     const { className, instructorName, price, email, seats, status } = data;
                     const newClass = { className, instructorName, email, price: parseFloat(price), seats: parseFloat(seats), classImg: imgUrl , status}
-                    fetch('http://localhost:5000/classes', {
+                    fetch('https://assignment-12-server-xi-fawn.vercel.app/classes', {
                         method: 'POST',
                         headers:{
                             'content-type': 'application/json',

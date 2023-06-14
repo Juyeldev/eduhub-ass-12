@@ -22,7 +22,7 @@ console.log(singleClass)
         // console.log(singleClass)
         if (user && user.email) {
             const selectItem = { classId: _id, className, classImg, instructorName, price, studentNumber, email: user.email }
-            fetch('http://localhost:5000/carts', {
+            fetch('https://assignment-12-server-xi-fawn.vercel.app/carts', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json',

@@ -29,7 +29,7 @@ const Selected_Class = () => {
     // })
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/carts?email=${user?.email}`)
+        fetch(`https://assignment-12-server-xi-fawn.vercel.app/carts?email=${user?.email}`)
         .then(res=>res.json())
         .then(data=>{
             console.log(data)

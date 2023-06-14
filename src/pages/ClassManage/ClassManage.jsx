@@ -14,7 +14,7 @@ const ClassManage = () => {
     const { data: classes = [] } = useQuery({
         queryKey: ['classes'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/classes/mangeClass');
+            const res = await axios.get('https://assignment-12-server-xi-fawn.vercel.app/classes/mangeClass');
             return res.data;
         },
         enabled: !loading && !!user?.email,
@@ -25,7 +25,7 @@ const ClassManage = () => {
 
     const handleApprovedStatus = (_id) => {
         //     console.log(id);
-        fetch(`http://localhost:5000/classes/approved/${_id}`, {
+        fetch(`https://assignment-12-server-xi-fawn.vercel.app/classes/approved/${_id}`, {
           method: "PUT",
         })
           .then((res) => res.json())
@@ -45,7 +45,7 @@ const ClassManage = () => {
       };
     const handleDenyStatus = (_id) => {
         //     console.log(id);
-        fetch(`http://localhost:5000/classes/deny/${_id}`, {
+        fetch(`https://assignment-12-server-xi-fawn.vercel.app/classes/deny/${_id}`, {
           method: "PUT",
         })
           .then((res) => res.json())

@@ -28,7 +28,7 @@ const [axiosSecure]= useAxiosSecure()
     // const { data: classes = [] } = useQuery({
     //     queryKey: ['classes'],
     //     queryFn: async () => {
-    //         const res = await axios.get(`http://localhost:5000/classes?${user?.email}`, {
+    //         const res = await axios.get(`https://assignment-12-server-xi-fawn.vercel.app/classes?${user?.email}`, {
     //             headers: {
     //                 authorization: `bearer ${token}`
     //             }
